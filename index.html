@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BCA Education Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --brand:#2563eb;
+      --muted:#f1f5f9;
+      --card-bg:#ffffff;
+      --text-dark:#0f172a;
+      --shadow-sm:rgba(0,0,0,0.06);
+      --shadow-lg:rgba(0,0,0,0.12);
+    }
+
+    html,body{height:100%;margin:0;padding:0}
+    body{background:#f8fafc;color:var(--text-dark);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial}
+
+    .section-title{
+      font-size:2rem;
+      font-weight:700;
+      border-left:4px solid var(--brand);
+      padding-left:12px;
+      margin-bottom:20px;
+    }
+
+    .scroll-container{
+      overflow-x:auto;
+      overflow-y:hidden; /* remove right-side scrollbar */
+      white-space:nowrap;
+      padding:12px 0 18px;
+      scrollbar-width:thin;
+      scrollbar-color:rgba(37,99,235,0.35) transparent;
+      cursor:default;
+    }
+
+    .scroll-container::-webkit-scrollbar{height:6px}
+    .scroll-container::-webkit-scrollbar-track{background:transparent}
+    .scroll-container::-webkit-scrollbar-thumb{background:rgba(37,99,235,0.35);border-radius:10px}
+
+    .scroll-line{display:flex;gap:20px}
+
+    .subject-card{
+      background:var(--card-bg);
+      padding:20px;
+      width:260px;
+      height:300px;
+      flex:0 0 260px;
+      border-radius:14px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      box-shadow:0 6px 18px var(--shadow-sm);
+      transition:.3s;
+    }
+
+    .subject-card:hover{transform:translateY(-6px);box-shadow:0 14px 34px var(--shadow-lg)}
+
+    .subject-card h3{font-size:1.15rem;font-weight:700;margin-bottom:12px}
+
+    .subject-card ul{list-style:none;padding:0;margin:0}
+
+    /* FULL ROW BUTTON STYLE */
+    .row-btn{
+      background:var(--muted);
+      border-radius:8px;
+      margin-bottom:8px;
+      transition:.2s;
+    }
+
+    .row-btn:hover{background:#e6f0ff;transform:translateX(6px)}
+
+    .row-anchor{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      width:100%;
+      padding:10px;
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .row-text{font-weight:500}
+
+    .pdf-link img{width:20px;height:20px}
+
+    .animate{opacity:0;transform:translateY(20px);transition:.6s}
+    .in-view{opacity:1;transform:none}
+
+    @media(max-width:640px){.subject-card{width:220px;height:280px}}
+  </style>
+</head>
+<body>
+
+<section class="bg-gradient-to-br from-blue-600 to-blue-800 text-white text-center py-24 px-6 animate relative">
+  <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Bachelor of Computer Applications (BCA)</h1>
+  <p class="max-w-3xl mx-auto text-lg opacity-90">
+    A professional undergraduate program focusing on software development, databases, web technologies, and modern computing skills.
+  </p>
+  <div class="mt-6 space-y-2">
+    <p class="italic">"Build strong logic, write powerful code – BCA shapes programmers."</p>
+    <p class="italic">"Today’s learning is tomorrow’s success."</p>
+  </div>
+  <div class="absolute bottom-6 right-6 text-sm md:text-base font-semibold bg-black/20 px-3 py-1 rounded-lg backdrop-blur-sm">Makwana Harshad</div>
+</section>
+
+<!-- TIME TABLE -->
+<section class="py-16 px-6 max-w-6xl mx-auto animate">
+  <h2 class="section-title">Time Table</h2>
+  <div class="grid grid-cols-1 gap-6">
+    <div class="subject-card animate w-full" style="height:350px">
+      <h3>Div A</h3>
+      <img src="sem-6 Time Table/Div-A.jpg" alt="Div A Time Table" class="rounded-lg mt-3 w-full h-[250px] object-contain">
+    </div>
+    <div class="subject-card animate w-full" style="height:350px">
+      <h3>Div B</h3>
+      <img src="sem-6 Time Table/Div-B.jpg" alt="Div B Time Table" class="rounded-lg mt-3 w-full h-[250px] object-contain">
+    </div>
+    <div class="subject-card animate w-full" style="height:350px">
+      <h3>Div C</h3>
+      <img src="sem-6 Time Table/Div-C.jpg" alt="Div C Time Table" class="rounded-lg mt-3 w-full h-[250px] object-contain">
+    </div>
+  </div>
+</section>
+
+<!-- SUBJECTS -->
+<section class="py-16 px-6 max-w-6xl mx-auto animate">
+  <h2 class="section-title">Subjects</h2>
+  <div class="scroll-container">
+    <div class="scroll-line">
+      <div class="subject-card animate"><h3>Advance JAVA</h3><ul>
+        <li class="row-btn"><a href="A_JAVA/Unit1 A_JAVA.pdf" class="row-anchor"><span class="row-text">Unit-1</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Unit-2</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Unit-3</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Unit-4</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+      </ul></div>
+      <div class="subject-card animate"><h3>Oracle-2 (DB)</h3><ul>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Unit-1</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Unit-2</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Unit-3</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Unit-4</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+      </ul></div>
+      <div class="subject-card animate"><h3>ASP.Net</h3><ul>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Unit-1</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Unit-2</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Unit-3</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Unit-4</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+      </ul></div>
+      <div class="subject-card animate"><h3>MIS</h3><ul>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Unit-1</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Unit-2</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Unit-3</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Unit-4</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+      </ul></div>
+      <div class="subject-card animate"><h3>English Communication</h3><ul>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Unit-1</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Unit-2</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Unit-3</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Unit-4</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ASSIGNMENTS -->
+<section class="py-16 px-6 max-w-6xl mx-auto animate">
+  <h2 class="section-title">Assignments</h2>
+  <div class="scroll-container">
+    <div class="scroll-line">
+      <div class="subject-card animate"><h3>Advance JAVA</h3><ul>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Assignment-1</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Assignment-2</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Assignment-3</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+      </ul></div>
+      <div class="subject-card animate"><h3>Oracle-2 (DB)</h3><ul>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Assignment-1</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Assignment-2</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Assignment-3</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+      </ul></div>
+      <div class="subject-card animate"><h3>ASP.Net</h3><ul>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Assignment-1</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Assignment-2</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Assignment-3</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ASSIGNMENT SOLUTIONS -->
+<section class="py-16 px-6 max-w-6xl mx-auto animate">
+  <h2 class="section-title">Assignment Solutions</h2>
+  <div class="scroll-container">
+    <div class="scroll-line">
+      <div class="subject-card animate"><h3>Advance JAVA</h3><ul>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Solution-1</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Solution-2</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Solution-3</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+      </ul></div>
+      <div class="subject-card animate"><h3>Oracle-2 (DB)</h3><ul>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Solution-1</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Solution-2</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Solution-3</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+      </ul></div>
+      <div class="subject-card animate"><h3>ASP.Net</h3><ul>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Solution-1</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Solution-2</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+        <li class="row-btn"><a href="#" class="row-anchor"><span class="row-text">Solution-3</span><span class="pdf-link"><img src="https://img.icons8.com/ios-glyphs/20/2563eb/pdf.png"></span></a></li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<footer class="text-center py-6 text-gray-600">© 2025 BCA Education Portal<br>Created By <strong>Makwana Harshad</strong> (Div-B)</footer>
+
+<script>
+const observer=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in-view')));
+document.querySelectorAll('.animate').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
