@@ -90,7 +90,26 @@
     .in-view{opacity:1;transform:none}
 
     @media(max-width:640px){.subject-card{width:220px;height:280px}}
-  </style>
+    .time-table-card{
+    padding:16px;
+    height:auto;
+  }
+  .time-table-img{
+    width:100%;
+    height:auto;
+    max-height:480px;
+    object-fit:contain;
+    margin-top:12px;
+  }
+  @media (max-width:640px){
+    .time-table-card{
+      padding:12px;
+    }
+    .time-table-img{
+      max-height:none;
+    }
+  }
+</style>
 </head>
 <body>
 
@@ -110,17 +129,17 @@
 <section class="py-16 px-6 max-w-6xl mx-auto animate">
   <h2 class="section-title">Time Table</h2>
   <div class="grid grid-cols-1 gap-6">
-    <div class="subject-card animate w-full" style="height:350px">
+    <div class="subject-card animate w-full time-table-card">
       <h3>Div A</h3>
-      <img src="sem-6 Time Table/Div-A.jpg" alt="Div A Time Table" class="rounded-lg mt-3 w-full h-[250px] object-contain">
+      <img src="sem-6 Time Table/Div-A.jpg" alt="Div A Time Table" class="time-table-img">
     </div>
-    <div class="subject-card animate w-full" style="height:350px">
+    <div class="subject-card animate w-full time-table-card">
       <h3>Div B</h3>
-      <img src="sem-6 Time Table/Div-B.jpg" alt="Div B Time Table" class="rounded-lg mt-3 w-full h-[250px] object-contain">
+      <img src="sem-6 Time Table/Div-B.jpg" alt="Div B Time Table" class="time-table-img">
     </div>
-    <div class="subject-card animate w-full" style="height:350px">
+    <div class="subject-card animate w-full time-table-card">
       <h3>Div C</h3>
-      <img src="sem-6 Time Table/Div-C.jpg" alt="Div C Time Table" class="rounded-lg mt-3 w-full h-[250px] object-contain">
+      <img src="sem-6 Time Table/Div-C.jpg" alt="Div C Time Table" class="time-table-img">
     </div>
   </div>
 </section>
